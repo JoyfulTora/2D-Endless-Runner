@@ -21,12 +21,14 @@ public class CharacterMoveController : MonoBehaviour
 
     private Animator anim;
 
+    private CharacterSoundController sound;
 
     // Start is called before the first frame update
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sound = GetComponent<CharacterSoundController>();
     }
 
     private void FixedUpdate()
@@ -62,7 +64,7 @@ public class CharacterMoveController : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + (Vector3.down * groundRaycastDistance), Color.white);
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
      //read input
      if (Input.GetMouseButtonDown(0))
@@ -70,6 +72,7 @@ public class CharacterMoveController : MonoBehaviour
             if (isOnGround)
             {
                 isJumping = true;
+                sound.Playjump();
             }
         }
         //change animation
