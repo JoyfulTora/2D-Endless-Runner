@@ -452,7 +452,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAccel: 2
-  maxSpeed: 4
+  maxSpeed: 2
+  jumpAccel: 7
+  groundRaycastDistance: 1.2
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761248223}
   - component: {fileID: 1761248222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
