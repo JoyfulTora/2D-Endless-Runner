@@ -19,6 +19,8 @@ public class TerrainGeneratorController : MonoBehaviour
     private List<GameObject> spawnedTerrain;
     private float lastGeneratedPositionX;
 
+    private float lastRemovedPositionX;
+
     private const float debugLineHeight = 10.0f;
 
     private float GetHorizontalPositionStart()
@@ -83,14 +85,14 @@ public class TerrainGeneratorController : MonoBehaviour
 
         foreach (TerrainTemplateController terrain in earlyTerrainTemplates)
         {
-        GenerateTerrain(lastGeneratedPositionX, terrain);
-        lastGeneratedPositionX += terrainTemplateWidth;
+            GenerateTerrain(lastGeneratedPositionX, terrain);
+            lastGeneratedPositionX += terrainTemplateWidth;
         }
 
         while (lastGeneratedPositionX < GetHorizontalPositionEnd())
         {
-        GenerateTerrain(lastGeneratedPositionX);
-        lastGeneratedPositionX += terrainTemplateWidth;
+            GenerateTerrain(lastGeneratedPositionX);
+            lastGeneratedPositionX += terrainTemplateWidth;
         }
     }
 
