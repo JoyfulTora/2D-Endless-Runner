@@ -523,11 +523,28 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 943067432280299627, guid: 421a717a7d2e5f9459dcc1f828710712, type: 3}
   m_PrefabInstance: {fileID: 943067433074909866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1025678459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8651761511379401483, guid: 421a717a7d2e5f9459dcc1f828710712, type: 3}
+  m_PrefabInstance: {fileID: 943067433074909866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1025678460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6641555569024282844, guid: 421a717a7d2e5f9459dcc1f828710712, type: 3}
   m_PrefabInstance: {fileID: 943067433074909866}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1025678461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025678459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b4979700bbbfc48bb508942b143d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1196126341 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 943067432021398063, guid: 421a717a7d2e5f9459dcc1f828710712, type: 3}
@@ -549,6 +566,7 @@ GameObject:
   - component: {fileID: 1417016259}
   - component: {fileID: 1417016261}
   - component: {fileID: 1417016260}
+  - component: {fileID: 1417016262}
   m_Layer: 8
   m_Name: Ground Container
   m_TagString: Untagged
@@ -692,6 +710,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1417016262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417016258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5e1830b56ffe94184d844306917468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainTemplates:
+  - {fileID: 1417016262}
+  terrainTemplateWidth: 0
+  gameCamera: {fileID: 519420031}
+  areaStartOffset: 0
+  areaEndOffset: 0
 --- !u!61 &1761248224 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 943067431592649034, guid: 421a717a7d2e5f9459dcc1f828710712, type: 3}
