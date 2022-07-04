@@ -102,27 +102,6 @@ public class TerrainGeneratorController : MonoBehaviour
         item.SetActive(false);
     }
 
-    private void GenerateTerrain(float posX, TerrainTemplateController forceterrain =
-    null)
-    {
-        GameObject item = null;
-        if(forceterrain == null)
-        {
-        item = terrainTemplates[Random.Range(0, terrainTemplates.Count)].gameObject;
-        }
-        else
-        {
-            item = forceterrain.gameObject;
-        }
-
-        //GameObject newTerrain = Instantiate(item, transform)
-        GameObject newTerrain = GenerateFromPool(item, transform);
-
-        newTerrain.transform.position = new Vector2(posX, 0f);
-
-        spawnedTerrain.Add(newTerrain);
-    }
-
     private void RemoveTerrain(float posX)
     {
         GameObject terrainToRemove = null;
@@ -135,7 +114,7 @@ public class TerrainGeneratorController : MonoBehaviour
                 break;
             }
         }
-        
+
         // after found;
         if (terrainToRemove != null)
         {
