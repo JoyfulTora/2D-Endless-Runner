@@ -19,6 +19,11 @@ public class CharacterMoveController : MonoBehaviour
     public float groundRaycastDistance;
     public LayerMask groundLayerMask;
 
+    [Header("Scoring")]
+    public ScoreController score;
+    public float scoringRatio;
+    private float lastPositionX;
+
     private Animator anim;
 
     private CharacterSoundController sound;
@@ -63,6 +68,7 @@ public class CharacterMoveController : MonoBehaviour
     {
         Debug.DrawLine(transform.position, transform.position + (Vector3.down * groundRaycastDistance), Color.white);
     }
+
     // Update is called once per frame
     private void Update()
     {
@@ -77,5 +83,15 @@ public class CharacterMoveController : MonoBehaviour
         }
         //change animation
         anim.SetBool("isOnGround", isOnGround);
+
+         // calculate score
+        int distancePassed = Mathf.FloorToInt(transform.position.x - lastPositionX);
+        int scoreIncrement = Mathf.FloorToInt(distancePassed / scoringRatio);
+
+        if (scoreIncrement > 0)
+        {
+            score.IncreaseCurrentScore(scoreIncrement);
+            lastPositionX += distancePassed;
+        }
     }
 }
