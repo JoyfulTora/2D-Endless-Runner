@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: {fileID: 8300000, guid: ef8fb1c7360b2f444bcb13df82ec97d6, type: 3}
+  scoreHighlight: {fileID: 8300000, guid: 70d220da4353cde40bf581800abef6a7, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a7282cc7fa0cb4a82bd90f1db731a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreHighlightRange: 0
+  sound: {fileID: 502328679}
 --- !u!4 &1117549072
 Transform:
   m_ObjectHideFlags: 0
